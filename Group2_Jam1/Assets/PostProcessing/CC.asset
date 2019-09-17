@@ -104,7 +104,7 @@ MonoBehaviour:
         intensity: 1.4
         threshold: 1.34
         softKnee: 0.725
-        radius: 4.24
+        radius: 4
         antiFlicker: 1
       lensDirt:
         texture: {fileID: 2800000, guid: 3884f7a2d04ffe8409ad9200b275896f, type: 3}
@@ -135,7 +135,7 @@ MonoBehaviour:
       colorWheels:
         mode: 1
         log:
-          slope: {r: 1, g: 0.9667946, b: 0.8462071, a: 0}
+          slope: {r: 1, g: 0.8849773, b: 0.7742627, a: 0}
           power: {r: 0.6044409, g: 0.6876008, b: 1, a: 0}
           offset: {r: 1, g: 1, b: 1, a: 0}
         linear:
