@@ -56,6 +56,35 @@ public class HealthBar : MonoBehaviour
             healthChange.color = new Color32(255, (byte)MapValues(currentHP, 0, maxHP / 2, 0, 255), 0, 255);
         }
     }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag.Equals("Heart"))
+        {
+            Debug.Log("Getting Health!!");
+            if (currentHP < maxHP)
+            {
+                CurrentHP += 10;
+                Destroy(collider.gameObject);
+            }
+        }
+        else if (collider.gameObject.tag.Equals("Coin"))
+        {
+            currentCoins += 1;
+            coinText.text = "" + currentCoins;
+            Destroy(collider.gameObject);
+
+        }
+        else if (collider.gameObject.tag.Equals("Jewel"))
+        {
+            currentCoins += 10;
+            coinText.text = "" + currentCoins;
+            Destroy(collider.gameObject);
+
+        }
+    }
+
+    /*
     void OnTriggerEnter(Collider collider)
     {
         if (collider.name == "heart 1")
@@ -92,6 +121,7 @@ public class HealthBar : MonoBehaviour
 
         }
     }
+    */
 
     private float MapValues(float x, float inMin, float inMax, float outMin, float outMax)
     {

@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - DestoryCollision
   - Key
+  - Coin
+  - Jewel
+  - Heart
   layers:
   - Default
   - TransparentFX
