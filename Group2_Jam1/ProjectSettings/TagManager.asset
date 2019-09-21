@@ -7,6 +7,7 @@ TagManager:
   - Fire
   - Enemy
   - DestoryCollision
+  - Key
   layers:
   - Default
   - TransparentFX
