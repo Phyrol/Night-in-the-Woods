@@ -24,6 +24,8 @@ Cmd: preprocess
   insize=1060 outsize=1390 ok=1
 Cmd: preprocessCompute
   insize=1431 outsize=1435 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=7437 outsize=3099 ok=1
 Cmd: preprocess
   insize=13381 outsize=2646 ok=1
 Cmd: preprocess
@@ -34,6 +36,8 @@ Cmd: preprocess
   insize=5962 outsize=1841 ok=1
 Cmd: preprocessCompute
   insize=3267 outsize=3273 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=7904 outsize=5219 ok=1
 Cmd: preprocess
   insize=2264 outsize=298 ok=1
 Cmd: preprocess
@@ -66,6 +70,8 @@ Cmd: preprocess
   insize=1637 outsize=638 ok=1
 Cmd: preprocessCompute
   insize=1522 outsize=1526 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=7480 outsize=3510 ok=1
 Cmd: preprocess
   insize=1966 outsize=588 ok=1
 Cmd: preprocess
@@ -84,6 +90,8 @@ Cmd: preprocess
   insize=1371 outsize=372 ok=1
 Cmd: preprocessCompute
   insize=2341 outsize=2343 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=7310 outsize=3123 ok=1
 Cmd: preprocess
   insize=3433 outsize=1527 ok=1
 Cmd: preprocess
