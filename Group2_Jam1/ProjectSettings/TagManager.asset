@@ -12,6 +12,8 @@ TagManager:
   - Jewel
   - Heart
   - KillZone
+  - Bat
+  - Zombie
   layers:
   - Default
   - TransparentFX
