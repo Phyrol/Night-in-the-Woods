@@ -11,6 +11,7 @@ TagManager:
   - Coin
   - Jewel
   - Heart
+  - KillZone
   layers:
   - Default
   - TransparentFX

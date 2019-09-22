@@ -61,7 +61,6 @@ public class HealthBar : MonoBehaviour
     {
         if (collider.gameObject.tag.Equals("Heart"))
         {
-            Debug.Log("Getting Health!!");
             if (currentHP < maxHP)
             {
                 CurrentHP += 10;
@@ -82,6 +81,14 @@ public class HealthBar : MonoBehaviour
             Destroy(collider.gameObject);
 
         }
+        else if (collider.gameObject.tag.Equals("KillZone"))
+        {
+            if (currentHP < maxHP)
+            {
+                CurrentHP = 0;
+            }
+        }
+
     }
 
     /*

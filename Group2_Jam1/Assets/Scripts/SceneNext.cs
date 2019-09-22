@@ -5,21 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneNext : MonoBehaviour
 {
-	Scene CurrentScene = SceneManager.GetActiveScene();
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-	void OnTriggerEnter(Collider RigidBodyFPSController){
+    void OnTriggerEnter(Collider other){
 		
-		SceneManager.LoadScene(CurrentScene.buildIndex + 1, LoadSceneMode.Single);
+		if(other.gameObject.tag.Equals("Player"))
+        {
+            if (SceneManager.GetActiveScene().name.Equals("Level01"))
+            {
+                SceneManager.LoadScene(1);
+            }
+            else
+            {
+                SceneManager.LoadScene(2);
+            }
+        }
 		
-		}
+	}
 }
