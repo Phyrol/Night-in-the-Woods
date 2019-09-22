@@ -36,6 +36,10 @@ public class Shooting : MonoBehaviour
             {
                 hit.transform.SendMessage("damage", 50f);
             }
+            if (hit.collider.tag.Equals("Zombie"))
+            {
+                hit.transform.SendMessage("damage", 34f);
+            }
 
             //destroy clone after 1 second
             Destroy(impactGO, 1f);

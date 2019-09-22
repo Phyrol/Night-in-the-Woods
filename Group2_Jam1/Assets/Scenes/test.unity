@@ -362,7 +362,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.4
-  m_Center: {x: 0, y: 0.3, z: 0}
+  m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!114 &1097596464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +391,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c4575b1da00b6e4e8525a5d0fcc7ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &1529296158
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529296156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.7, z: 0.06}
+--- !u!114 &1529296159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529296156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996d883f55daafd4a8006d5fc0984a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1843222460
@@ -499,7 +525,7 @@ PrefabInstance:
     - target: {fileID: 330500823846571630, guid: f198d14b10c72fa499f7c60b17fbc603,
         type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Zombie
       objectReference: {fileID: 0}
     - target: {fileID: 7217662277459495547, guid: f198d14b10c72fa499f7c60b17fbc603,
         type: 3}
