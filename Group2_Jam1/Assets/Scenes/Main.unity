@@ -1598,6 +1598,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.8107157, y: 2.69514, z: 5.7505484}
   m_Center: {x: 5, y: 1.34757, z: 5}
+--- !u!1 &1926839110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926839111}
+  - component: {fileID: 1926839112}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1926839111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926839110}
+  m_LocalRotation: {x: -0, y: -0.84158194, z: -0, w: 0.5401294}
+  m_LocalPosition: {x: -80.5, y: 96.5, z: -184.44}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8324013792525754748}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1926839112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926839110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408450f5ebb88a34c8b592ea51957926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Coin Sound
+    clip: {fileID: 8300000, guid: e84214efae3077b4db0ab32b7bbe8267, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Jewel Sound
+    clip: {fileID: 8300000, guid: 82b107054b3208b4b87814aa160c3432, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Theme
+    clip: {fileID: 8300000, guid: 9b97a80e0c7a8814e9bd65444b381597, type: 3}
+    volume: 0.3
+    source: {fileID: 0}
+    loop: 1
+  - name: Heart Sound
+    clip: {fileID: 8300000, guid: 7bcbbe3f654a3c542b17d2e190a6ed99, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Gun Shot
+    clip: {fileID: 8300000, guid: 38b450e2adcb6f542acc8c1d423bd8dc, type: 3}
+    volume: 0.3
+    source: {fileID: 0}
+    loop: 0
+  - name: Key Sound
+    clip: {fileID: 8300000, guid: 195ae246398bdfa47aa384b5994d0b71, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
 --- !u!1001 &1976225610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1855,3 +1929,9 @@ PrefabInstance:
       objectReference: {fileID: 74459884}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f92c5ef30a8aa3d4fa483a163d528f56, type: 3}
+--- !u!4 &8324013792525754748 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8324013793981340510, guid: f92c5ef30a8aa3d4fa483a163d528f56,
+    type: 3}
+  m_PrefabInstance: {fileID: 8324013792525754747}
+  m_PrefabAsset: {fileID: 0}

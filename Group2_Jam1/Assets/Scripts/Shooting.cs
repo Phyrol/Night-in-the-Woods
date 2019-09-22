@@ -22,6 +22,7 @@ public class Shooting : MonoBehaviour
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
+            FindObjectOfType<AudioManager>().Play("Gun Shot");
         }
     }
 

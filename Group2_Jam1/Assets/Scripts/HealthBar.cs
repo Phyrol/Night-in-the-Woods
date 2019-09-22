@@ -37,7 +37,10 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (CurrentHP == 0)
+        {
 
+        }
     }
 
     private void HandleHealth()
@@ -65,6 +68,7 @@ public class HealthBar : MonoBehaviour
             {
                 CurrentHP += 10;
                 Destroy(collider.gameObject);
+                FindObjectOfType<AudioManager>().Play("Heart Sound");
             }
         }
         else if (collider.gameObject.tag.Equals("Coin"))
@@ -72,6 +76,7 @@ public class HealthBar : MonoBehaviour
             currentCoins += 1;
             coinText.text = "" + currentCoins;
             Destroy(collider.gameObject);
+            FindObjectOfType<AudioManager>().Play("Coin Sound");
 
         }
         else if (collider.gameObject.tag.Equals("Jewel"))
@@ -79,14 +84,22 @@ public class HealthBar : MonoBehaviour
             currentCoins += 10;
             coinText.text = "" + currentCoins;
             Destroy(collider.gameObject);
+            FindObjectOfType<AudioManager>().Play("Jewel Sound");
 
+        }
+        else if (collider.gameObject.tag.Equals("Key"))
+        {
+            Destroy(collider.gameObject);
+            FindObjectOfType<AudioManager>().Play("Key Sound");
+
+        }
+        else if (collider.gameObject.tag.Equals("Fire"))
+        {
+            CurrentHP -= 2;
         }
         else if (collider.gameObject.tag.Equals("KillZone"))
         {
-            if (currentHP < maxHP)
-            {
                 CurrentHP = 0;
-            }
         }
 
     }
