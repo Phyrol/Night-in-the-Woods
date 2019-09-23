@@ -40,13 +40,13 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5422670118564301253}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -115,7 +115,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 0.3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -609,7 +609,7 @@ ParticleSystem:
     angle: 10
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.4
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -811,7 +811,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 60
+      scalar: 30
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -899,7 +899,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -3482,7 +3482,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 3
     type: 1
     collisionMode: 0
@@ -4626,7 +4626,7 @@ ParticleSystemRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5422670118564301253}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4723,7 +4723,7 @@ ParticleSystemRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5422670119996201344}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

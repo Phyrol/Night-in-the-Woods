@@ -7,7 +7,7 @@ public class HealthBar : MonoBehaviour
     private float storedY;
     private float minXVal;
     private float maxXVal;
-    private int currentHP;
+    public int currentHP;
     public int maxHP;
     public Text healthText;
     public Image healthChange;
@@ -16,10 +16,15 @@ public class HealthBar : MonoBehaviour
     public Text coinText;
     private int currentCoins;
 
-    private int CurrentHP
+    public int CurrentHP
     {
-        get {return currentHP;}
-      set{currentHP = value;
+        get
+        {
+            return currentHP;
+        }
+        set
+        {
+            currentHP = value;
             HandleHealth();
         }
     }
@@ -38,6 +43,11 @@ public class HealthBar : MonoBehaviour
     void Update()
     {
 
+    }
+
+    private void takeDamage(int value)
+    {
+        CurrentHP -= value;
     }
 
     private void HandleHealth()
@@ -85,10 +95,9 @@ public class HealthBar : MonoBehaviour
         {
             if (currentHP < maxHP)
             {
-                CurrentHP = 0;
+                CurrentHP -= 200;
             }
         }
-
     }
 
     /*

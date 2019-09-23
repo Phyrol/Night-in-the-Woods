@@ -5,19 +5,27 @@ using UnityEngine;
 public class chaseFlying : MonoBehaviour
 {
     private Transform player;
-    static Animator anim;
+    private Animator anim;
+    private GameObject playerObj;
+    private int damage = 15;
+    private int playerHP;
+    private float initialTimer = 1f;
+    private float afterTimer = 2.4f;
+    private float timeCounter = 0f;
+    private bool afterFirst = false;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerObj = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(player.position, this.transform.position) < 10)
+        if (Vector3.Distance(player.position, this.transform.position) < 18)
         {
             Vector3 direction = player.position - this.transform.position;
 
@@ -26,7 +34,7 @@ public class chaseFlying : MonoBehaviour
             anim.SetBool("isIdle", false);
             if (direction.magnitude > 1.6)
             {
-                this.transform.Translate(0, 0, 0.04f);
+                this.transform.Translate(0, 0, 0.15f);
                 anim.SetBool("isFlying", true);
                 anim.SetBool("isAttacking", false);
             }
@@ -34,6 +42,27 @@ public class chaseFlying : MonoBehaviour
             {
                 anim.SetBool("isAttacking", true);
                 anim.SetBool("isFlying", false);
+
+                if (timeCounter > initialTimer && !afterFirst)
+                {
+                    playerObj.SendMessage("takeDamage", damage);
+                    afterFirst = true;
+                    timeCounter = 0f;
+                }
+                else
+                {
+                    timeCounter = timeCounter + Time.deltaTime;
+                }
+
+                if (timeCounter > afterTimer && afterFirst)
+                {
+                    playerObj.SendMessage("takeDamage", damage);
+                    timeCounter = 0f;
+                }
+                else
+                {
+                    timeCounter = timeCounter + Time.deltaTime;
+                }
             }
         }
         else
