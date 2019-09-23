@@ -20,6 +20,7 @@ public class PlayerCollisions : MonoBehaviour
     {
         if(other.gameObject.tag.Equals("Key"))
         {
+            FindObjectOfType<AudioManager>().Play("Key");
             other.gameObject.SetActive(false);
         }
     }

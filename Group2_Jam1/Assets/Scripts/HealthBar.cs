@@ -73,12 +73,14 @@ public class HealthBar : MonoBehaviour
         {
             if (currentHP < maxHP)
             {
+                FindObjectOfType<AudioManager>().Play("Heart");
                 CurrentHP += 10;
                 Destroy(collider.gameObject);
             }
         }
         else if (collider.gameObject.tag.Equals("Coin"))
         {
+            FindObjectOfType<AudioManager>().Play("Coin");
             currentCoins += 1;
             coinText.text = "" + currentCoins;
             Destroy(collider.gameObject);
@@ -86,6 +88,7 @@ public class HealthBar : MonoBehaviour
         }
         else if (collider.gameObject.tag.Equals("Jewel"))
         {
+            FindObjectOfType<AudioManager>().Play("Jewel");
             currentCoins += 10;
             coinText.text = "" + currentCoins;
             Destroy(collider.gameObject);
@@ -95,7 +98,8 @@ public class HealthBar : MonoBehaviour
         {
             if (currentHP < maxHP)
             {
-                CurrentHP -= 200;
+                FindObjectOfType<AudioManager>().Play("Damage");
+                CurrentHP = 0;
             }
         }
     }
