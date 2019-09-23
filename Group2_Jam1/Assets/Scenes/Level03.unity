@@ -4666,6 +4666,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 485494676}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &489875215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 489875216}
+  - component: {fileID: 489875217}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &489875216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489875215}
+  m_LocalRotation: {x: -0, y: 0.55724347, z: -0, w: 0.8303492}
+  m_LocalPosition: {x: -3.3822603, y: -2.41, z: -22.538414}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6796917375044798838}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &489875217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489875215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fd65ed14c3b4b05998867e490bcca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 0b8267f90672d45dfb9177daa973aa89, type: 3}
+    volume: 0.4
+    source: {fileID: 0}
+    loop: 1
+  - name: Shoot
+    clip: {fileID: 8300000, guid: be968eab8f9d04adba78d234907bbded, type: 3}
+    volume: 0.3
+    source: {fileID: 0}
+    loop: 0
+  - name: Coin
+    clip: {fileID: 8300000, guid: 41ffc27dae7534944be95907028d1dbf, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Jewel
+    clip: {fileID: 8300000, guid: fd162ec02f5204f6e8a6d775ff6b6b9f, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Heart
+    clip: {fileID: 8300000, guid: 92abd47469df44266a006fbc621bf78f, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Key
+    clip: {fileID: 8300000, guid: 15624ad697de44a6c98e920e5b605f64, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Damage
+    clip: {fileID: 8300000, guid: d39ec098d10574400926468ca3e55fd1, type: 3}
+    volume: 0.8
+    source: {fileID: 0}
+    loop: 0
 --- !u!1001 &491278721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20645,6 +20724,12 @@ PrefabInstance:
       objectReference: {fileID: 374437993}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44f9a0d9619edd3499108b407c1a86ba, type: 3}
+--- !u!4 &6796917375044798838 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3303203572984897352, guid: 44f9a0d9619edd3499108b407c1a86ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 6796917375044798837}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7147360272858730909
 PrefabInstance:
   m_ObjectHideFlags: 0

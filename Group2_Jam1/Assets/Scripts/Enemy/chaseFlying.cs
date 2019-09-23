@@ -46,6 +46,7 @@ public class chaseFlying : MonoBehaviour
                 if (timeCounter > initialTimer && !afterFirst)
                 {
                     playerObj.SendMessage("takeDamage", damage);
+                    FindObjectOfType<AudioManager>().Play("Damage");
                     afterFirst = true;
                     timeCounter = 0f;
                 }
@@ -57,6 +58,7 @@ public class chaseFlying : MonoBehaviour
                 if (timeCounter > afterTimer && afterFirst)
                 {
                     playerObj.SendMessage("takeDamage", damage);
+                    FindObjectOfType<AudioManager>().Play("Damage");
                     timeCounter = 0f;
                 }
                 else

@@ -48,6 +48,7 @@ public class chase : MonoBehaviour
                 if(timeCounter > initialTimer && !afterFirst)
                 {
                     playerObj.SendMessage("takeDamage", damage);
+                    FindObjectOfType<AudioManager>().Play("Damage");
                     afterFirst = true;
                     timeCounter = 0f;
                 }
@@ -59,6 +60,7 @@ public class chase : MonoBehaviour
                 if(timeCounter > afterTimer && afterFirst)
                 {
                     playerObj.SendMessage("takeDamage", damage);
+                    FindObjectOfType<AudioManager>().Play("Damage");
                     timeCounter = 0f;
                 }
                 else
