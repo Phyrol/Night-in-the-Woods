@@ -34,7 +34,7 @@ public class chaseFlying : MonoBehaviour
             anim.SetBool("isIdle", false);
             if (direction.magnitude > 1.6)
             {
-                this.transform.Translate(0, 0, 0.23f);
+                this.transform.Translate(0, 0, 0.20f);
                 anim.SetBool("isFlying", true);
                 anim.SetBool("isAttacking", false);
             }

@@ -36,7 +36,7 @@ public class chase : MonoBehaviour
             anim.SetBool("isIdle", false);
             if(direction.magnitude > 1.6)
             {
-                this.transform.Translate(0, 0, 0.20f);
+                this.transform.Translate(0, 0, 0.17f);
                 anim.SetBool("isWalking", true);
                 anim.SetBool("isAttacking", false);
             }
