@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
@@ -48,6 +49,10 @@ public class HealthBar : MonoBehaviour
     private void takeDamage(int value)
     {
         CurrentHP -= value;
+        if(currentHP <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     private void HandleHealth()
@@ -99,7 +104,7 @@ public class HealthBar : MonoBehaviour
             if (currentHP < maxHP)
             {
                 FindObjectOfType<AudioManager>().Play("Damage");
-                CurrentHP = 0;
+                takeDamage(200);
             }
         }
     }
