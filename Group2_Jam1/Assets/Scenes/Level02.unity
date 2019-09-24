@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.28235137, g: 0.3467693, b: 0.4433962, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
@@ -6155,7 +6155,7 @@ PrefabInstance:
     - target: {fileID: 4499561246967799315, guid: 574ffea809c94c24d91522b516f529e6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 82
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 4499561246967799315, guid: 574ffea809c94c24d91522b516f529e6,
         type: 3}
@@ -17977,7 +17977,7 @@ Transform:
   - {fileID: 1237030634}
   - {fileID: 84518737}
   m_Father: {fileID: 0}
-  m_RootOrder: 93
+  m_RootOrder: 95
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &849071744
 GameObject:
@@ -22733,7 +22733,7 @@ Transform:
   - {fileID: 1113732450}
   - {fileID: 2055551777}
   m_Father: {fileID: 0}
-  m_RootOrder: 95
+  m_RootOrder: 97
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1112679802
 PrefabInstance:
@@ -34603,7 +34603,7 @@ Transform:
   - {fileID: 100988404}
   - {fileID: 1357239056}
   m_Father: {fileID: 0}
-  m_RootOrder: 71
+  m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1697674319
 PrefabInstance:
@@ -37340,7 +37340,7 @@ Transform:
   - {fileID: 1384994325}
   - {fileID: 849071745}
   m_Father: {fileID: 0}
-  m_RootOrder: 94
+  m_RootOrder: 96
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1826863226
 PrefabInstance:
@@ -42553,7 +42553,7 @@ Transform:
   - {fileID: 139879998}
   - {fileID: 320367620}
   m_Father: {fileID: 0}
-  m_RootOrder: 92
+  m_RootOrder: 94
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2023553136
 PrefabInstance:
