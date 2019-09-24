@@ -26,7 +26,7 @@ public class chase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(player.position, this.transform.position) < 20)
+        if (Vector3.Distance(player.position, this.transform.position) < 17)
         {
             Vector3 direction = player.position - this.transform.position;
             direction.y = 0;
@@ -36,7 +36,7 @@ public class chase : MonoBehaviour
             anim.SetBool("isIdle", false);
             if(direction.magnitude > 1.6)
             {
-                this.transform.Translate(0, 0, 0.17f);
+                this.transform.Translate(0, 0, 0.14f);
                 anim.SetBool("isWalking", true);
                 anim.SetBool("isAttacking", false);
             }

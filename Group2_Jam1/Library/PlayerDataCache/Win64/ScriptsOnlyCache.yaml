@@ -4,6 +4,8 @@ ScriptsOnlyBuild:
     - UnityStandardAssets.Characters.FirstPerson.HeadBob
     - UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController
     Assembly-CSharp.dll:
+    - AudioManager
+    - Bus
     - DoorOpener
     - Health
     - HealthBar
@@ -27,6 +29,8 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
@@ -65,6 +69,8 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -111,9 +117,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 11680}
+      Script: {instanceID: 11648}
     - Class: 114
-      Script: {instanceID: 11824}
+      Script: {instanceID: 11686}
+    - Class: 114
+      Script: {instanceID: 11830}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -167,7 +175,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -179,6 +197,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9880}
     - Class: 114
       Script: {instanceID: 9932}
+    - Class: 114
+      Script: {instanceID: 9950}
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
@@ -192,6 +212,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10430}
     - Class: 114
+      Script: {instanceID: 10662}
+    - Class: 114
       Script: {instanceID: 10666}
     - Class: 114
       Script: {instanceID: 11150}
@@ -202,7 +224,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 11680}
+      Script: {instanceID: 11648}
+    - Class: 114
+      Script: {instanceID: 11686}
+    - Class: 114
+      Script: {instanceID: 11830}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -211,7 +237,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 134
       Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -252,7 +282,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -265,6 +307,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9932}
     - Class: 114
+      Script: {instanceID: 9950}
+    - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
       Script: {instanceID: 10068}
@@ -274,6 +318,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10298}
     - Class: 114
       Script: {instanceID: 10322}
+    - Class: 114
+      Script: {instanceID: 10426}
+    - Class: 114
+      Script: {instanceID: 10662}
     - Class: 114
       Script: {instanceID: 10666}
     - Class: 114
@@ -285,7 +333,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 11680}
+      Script: {instanceID: 11518}
+    - Class: 114
+      Script: {instanceID: 11648}
+    - Class: 114
+      Script: {instanceID: 11686}
+    - Class: 114
+      Script: {instanceID: 11830}
+    - Class: 114
+      Script: {instanceID: 11838}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -294,7 +350,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 134
       Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -1141,6 +1201,12 @@ ScriptsOnlyBuild:
     className: Ball
   - hash:
       serializedVersion: 2
+      Hash: 3701eeffb8918dbc69c9e42c2e636d6b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bus
+  - hash:
+      serializedVersion: 2
       Hash: a8cd58c1680eb5251e5604e560cf89e9
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
@@ -1175,6 +1241,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Water
     className: WaterTile
+  - hash:
+      serializedVersion: 2
+      Hash: d0960b1cf5c93664eea3a457c8b4bcb7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
   - hash:
       serializedVersion: 2
       Hash: 2c360dd850f0bf9b97332fbc3262549d
@@ -1300,4 +1372,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level01.unity
   - Assets/Scenes/Level02.unity
   - Assets/Scenes/Level03.unity
-  playerPath: C:/Users/B-Rad/Desktop/Group2_Final/Group2_Jam1.exe
+  playerPath: C:/Users/B-Rad/Desktop/Group2_Jam1_Final/Group2_Jam1.exe

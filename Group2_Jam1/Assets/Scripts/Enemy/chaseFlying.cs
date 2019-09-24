@@ -25,7 +25,7 @@ public class chaseFlying : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(player.position, this.transform.position) < 27)
+        if (Vector3.Distance(player.position, this.transform.position) < 22)
         {
             Vector3 direction = player.position - this.transform.position;
 
@@ -34,7 +34,7 @@ public class chaseFlying : MonoBehaviour
             anim.SetBool("isIdle", false);
             if (direction.magnitude > 1.6)
             {
-                this.transform.Translate(0, 0, 0.20f);
+                this.transform.Translate(0, 0, 0.17f);
                 anim.SetBool("isFlying", true);
                 anim.SetBool("isAttacking", false);
             }
