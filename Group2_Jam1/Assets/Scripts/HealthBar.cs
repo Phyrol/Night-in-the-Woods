@@ -79,7 +79,14 @@ public class HealthBar : MonoBehaviour
             if (currentHP < maxHP)
             {
                 FindObjectOfType<AudioManager>().Play("Heart");
-                CurrentHP += 10;
+                if(currentHP >= 95)
+                {
+                    CurrentHP += 5;
+                }
+                else
+                {
+                    CurrentHP += 10;
+                }
                 Destroy(collider.gameObject);
             }
         }
