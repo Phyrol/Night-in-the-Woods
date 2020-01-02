@@ -15,6 +15,8 @@ public class Shooting : MonoBehaviour
     private float nextTimeToFire = 0f;
     private float bulletSpeed = 2000f;
 
+    private float gunRecoil = 25f;
+
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +24,13 @@ public class Shooting : MonoBehaviour
         {
             Shoot();
             FindObjectOfType<AudioManager>().Play("Shoot");
+
+            transform.Rotate(gunRecoil, 0, 0);
+        }
+
+        if(Input.GetMouseButtonUp(0))
+        {
+            transform.Rotate(-gunRecoil, 0, 0);
         }
     }
 

@@ -16,6 +16,7 @@ public class chase : MonoBehaviour
     private bool afterFirst = false;
 
     private Animator anim;
+    private AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,8 @@ public class chase : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerObj = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
+
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -52,7 +55,7 @@ public class chase : MonoBehaviour
                     if (timeCounter > initialTimer && !afterFirst)
                     {
                         playerObj.SendMessage("takeDamage", damage);
-                        FindObjectOfType<AudioManager>().Play("Damage");
+                        audioManager.Play("Damage");
                         afterFirst = true;
                         timeCounter = 0f;
                     }
@@ -64,7 +67,7 @@ public class chase : MonoBehaviour
                     if (timeCounter > afterTimer && afterFirst)
                     {
                         playerObj.SendMessage("takeDamage", damage);
-                        FindObjectOfType<AudioManager>().Play("Damage");
+                        audioManager.Play("Damage");
                         timeCounter = 0f;
                     }
                     else
