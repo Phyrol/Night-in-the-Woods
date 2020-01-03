@@ -121,11 +121,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11866}
     - Class: 114
-      Script: {instanceID: 44638}
+      Script: {instanceID: 44698}
     - Class: 114
-      Script: {instanceID: 44980}
+      Script: {instanceID: 45042}
     - Class: 114
-      Script: {instanceID: 44982}
+      Script: {instanceID: 45044}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -1268,4 +1268,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Level01.unity
   - Assets/Scenes/Level02.unity
-  playerPath: C:/Users/B-Rad/Desktop/test/Group2_Jam1.exe
+  playerPath: C:/Users/B-Rad/Desktop/test2/Group2_Jam1.exe
