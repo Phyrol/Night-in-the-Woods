@@ -12,10 +12,12 @@ public class chaseFlying : MonoBehaviour
     private GameObject playerObj;
     private int damage = 15;
     private int playerHP;
+    private int noise;
     private float initialTimer = 1f;
     private float afterTimer = 2.4f;
     private float timeCounter = 0f;
     private bool afterFirst = false;
+    private bool alerted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,12 +38,18 @@ public class chaseFlying : MonoBehaviour
             {
                 Vector3 direction = player.position - this.transform.position;
 
-                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
+                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.2f);
+
+                if(!alerted)
+                {
+                    AlertSound();
+                    alerted = true;
+                }
 
                 anim.SetBool("isIdle", false);
                 if (direction.magnitude > 1.6)
                 {
-                    this.transform.Translate(0, 0, 0.17f);
+                    this.transform.Translate(0, 0, 0.22f);
                     anim.SetBool("isFlying", true);
                     anim.SetBool("isAttacking", false);
                 }
@@ -80,6 +88,23 @@ public class chaseFlying : MonoBehaviour
                 anim.SetBool("isFlying", false);
                 anim.SetBool("isAttacking", false);
             }
+        }
+    }
+
+    void AlertSound()
+    {
+        noise = Random.Range(0, 2);
+
+        switch (noise)
+        {
+            case 0:
+                audioManager.Play("BatAlert1");
+                break;
+            case 1:
+                audioManager.Play("BatAlert2");
+                break;
+            default:
+                break;
         }
     }
 }

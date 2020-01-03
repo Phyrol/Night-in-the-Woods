@@ -10,10 +10,12 @@ public class chase : MonoBehaviour
     private GameObject playerObj;
     private int damage = 10;
     private int playerHP;
+    private int noise;
     private float initialTimer = 0.4f;
     private float afterTimer = 1.6f;
     private float timeCounter = 0f;
     private bool afterFirst = false;
+    private bool alerted = false;
 
     private Animator anim;
     private AudioManager audioManager;
@@ -38,12 +40,17 @@ public class chase : MonoBehaviour
                 Vector3 direction = player.position - this.transform.position;
                 direction.y = 0;
 
-                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
+                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.2f);
+                if(!alerted)
+                {
+                    AlertSound();
+                    alerted = true;
+                }
 
                 anim.SetBool("isIdle", false);
                 if (direction.magnitude > 1.6)
                 {
-                    this.transform.Translate(0, 0, 0.14f);
+                    this.transform.Translate(0, 0, 0.20f);
                     anim.SetBool("isWalking", true);
                     anim.SetBool("isAttacking", false);
                 }
@@ -54,6 +61,8 @@ public class chase : MonoBehaviour
 
                     if (timeCounter > initialTimer && !afterFirst)
                     {
+                        AttackSound();
+
                         playerObj.SendMessage("takeDamage", damage);
                         audioManager.Play("Damage");
                         afterFirst = true;
@@ -66,6 +75,8 @@ public class chase : MonoBehaviour
 
                     if (timeCounter > afterTimer && afterFirst)
                     {
+                        AttackSound();
+
                         playerObj.SendMessage("takeDamage", damage);
                         audioManager.Play("Damage");
                         timeCounter = 0f;
@@ -82,6 +93,46 @@ public class chase : MonoBehaviour
                 anim.SetBool("isWalking", false);
                 anim.SetBool("isAttacking", false);
             }
+        }
+    }
+
+    void AlertSound()
+    {
+        noise = Random.Range(0, 3);
+
+        switch(noise)
+        {
+            case 0:
+                audioManager.Play("ZombieAlert1");
+                break;
+            case 1:
+                audioManager.Play("ZombieAlert2");
+                break;
+            case 2:
+                audioManager.Play("ZombieAlert3");
+                break;
+            default:
+                break;
+        }
+    }
+
+    void AttackSound()
+    {
+        noise = Random.Range(0, 3);
+
+        switch (noise)
+        {
+            case 0:
+                audioManager.Play("ZombieAttack1");
+                break;
+            case 1:
+                audioManager.Play("ZombieAttack2");
+                break;
+            case 2:
+                audioManager.Play("ZombieAttack3");
+                break;
+            default:
+                break;
         }
     }
 }
